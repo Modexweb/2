@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10131a">
+  <meta name="description" content="Discover mobile games, browse categories, explore game details, and find your next favourite game on Modex.">
+  <title>Modex — Discover your next game</title>
+  <link rel="icon" href="images/Baseball%209.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body data-page="home" data-base="./">
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Modex home"><span class="brand-mark"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M6 11.5a4.5 4.5 0 0 1 4.5-4.5h19a4.5 4.5 0 0 1 4.5 4.5v12a4.5 4.5 0 0 1-4.5 4.5h-4l-5 5-5-5h-5A4.5 4.5 0 0 1 6 23.5z" fill="currentColor"/><path d="M13 14v7m-3.5-3.5h7M26 15h.1M29 20h.1" stroke="#10131a" stroke-width="2.4" stroke-linecap="round"/></svg></span><span>mode<span class="brand-accent">x</span></span></a>
+    <nav class="header-nav" aria-label="Main navigation"><a class="nav-link active" href="./">Discover</a><a class="nav-link" href="#games">Games</a><a class="nav-link" href="./admin.html">Manage games</a></nav>
+    <div class="header-tools"><form class="search-box" id="searchForm" role="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg><input id="searchInput" name="q" type="search" placeholder="Search games..." aria-label="Search games"><kbd>↵</kbd></form><button class="icon-button" id="themeToggle" type="button" aria-label="Switch color theme" title="Switch theme"><span id="themeGlyph">☼</span></button></div>
+  </header>
+
+  <main class="page-wrap">
+    <section class="hero" id="hero" aria-labelledby="heroTitle">
+      <div class="hero-copy"><p class="eyebrow"><span class="eyebrow-dot"></span> YOUR NEXT LEVEL STARTS HERE</p><p class="hero-kicker" id="heroKicker">FEATURED GAME</p><h1 id="heroTitle">Find your<br><span>next obsession.</span></h1><p class="hero-description" id="heroDescription">Explore standout mobile games, discover new worlds, and pick your next challenge.</p><div class="hero-meta" id="heroMeta"><span>Mobile games</span><span>•</span><span>Fresh discoveries</span></div><div class="hero-actions"><a class="button button-light" href="#games" id="heroAction">Explore games <span aria-hidden="true">↗</span></a><span class="hero-note">A better way to discover games.</span></div></div>
+      <div class="hero-art" id="heroArt" aria-hidden="true"><div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div><div class="hero-art-glow"></div><img id="heroImage" src="images/Baseball%209.png" alt="" fetchpriority="high"><span class="hero-sticker sticker-top">PLAYER<br>READY</span><span class="hero-sticker sticker-bottom">LET'S PLAY ↗</span></div>
+      <div class="hero-index"><span id="heroIndex">01</span><span class="hero-index-line"></span><span id="heroTotal">11 GAMES</span></div>
+    </section>
+
+    <section class="section-block category-block" aria-labelledby="categoryHeading"><div class="section-heading compact-heading"><div><p class="section-overline">BROWSE YOUR WAY</p><h2 id="categoryHeading">Pick a category</h2></div><span class="heading-aside">Find a game that fits your mood.</span></div><div class="category-list" id="categoryList" aria-label="Filter games by category"><button class="category-chip selected" data-category="all" type="button">All games</button></div></section>
+
+    <section class="section-block" id="new-games" aria-labelledby="newHeading"><div class="section-heading"><div><p class="section-overline">FRESH ON MODEX</p><h2 id="newHeading">Recently added</h2></div><div class="section-controls"><span class="heading-aside">The latest additions to explore.</span><div class="rail-controls"><button class="icon-button rail-button" id="railPrev" type="button" aria-label="Scroll recent games left">←</button><button class="icon-button rail-button" id="railNext" type="button" aria-label="Scroll recent games right">→</button></div></div></div><div class="game-rail" id="recentGames" aria-live="polite"><div class="loading-state">Loading games…</div></div></section>
+
+    <section class="section-block catalog-section" id="games" aria-labelledby="gamesHeading"><div class="section-heading"><div><p class="section-overline">THE COLLECTION</p><h2 id="gamesHeading">Explore all games</h2></div><div class="catalog-tools"><span id="resultsCount" class="results-count">11 games</span><label class="sort-control">Sort <select id="sortSelect" aria-label="Sort games"><option value="featured">Featured</option><option value="name">Name A–Z</option><option value="rating">Top rating</option></select></label></div></div><div class="game-grid" id="gameGrid"><div class="loading-state">Loading games…</div></div><p class="empty-state hidden" id="emptyState">No games match that search. Try another title or category.</p></section>
+
+    <section class="bottom-banner"><div class="banner-spark">✳</div><div><p class="section-overline">THE COLLECTION KEEPS GROWING</p><h2>Your next favourite is out there.</h2><p>Explore the collection and find your next game.</p></div><a href="#games" class="button button-dark">Browse the collection <span aria-hidden="true">↗</span></a></section>
+  </main>
+  <footer class="site-footer"><a class="brand footer-brand" href="./"><span class="brand-mark">M</span><span>mode<span class="brand-accent">x</span></span></a><p>Discover games. Find your next level.</p><div class="footer-links"><a href="#games">Games</a><a href="./admin.html">Manage games</a></div><span class="copyright">© <span id="currentYear">2026</span> Modex</span></footer>
+</body>
+</html>
